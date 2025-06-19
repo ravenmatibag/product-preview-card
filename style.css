@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+:root{
+ --mobile: 375px;
+ --desktop: 1440px;
+
+ --green-500: hsl(158, 36%, 37%);
+ --green-700: hsl(158, 42%, 18%);
+
+ --black: hsl(212, 21%, 14%);
+ --grey: hsl(228, 12%, 48%);
+ --cream: hsl(30, 38%, 92%);
+ --white: hsl(0, 0%, 100%);
+
+ --fw-500: 500;
+ --fw-700: 700;
+
+ --fs-14: 0.875rem; 
+
+ --ff-primary: 'Montserrat', sans-serif;
+ --ff-secondary: 'Fraunces', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--ff-primary);
+    font-size: var(--fs-14);
+    background-color: var(--cream);
+    color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    background-color: var(--white);
+    max-width: 350px;
+    margin: 2rem 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.product-image{
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+    height: auto;
+    display: block;
+
+}
+
+.product-card{
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.category{
+    color: var(--grey);
+    font-weight: var(--fw-500);
+    letter-spacing: 0.25rem;
+    
+}
+
+h1{
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-700);
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.description{
+    color: var(--grey);
+    font-weight: var(--fw-500);
+    line-height: 1.5;
+}
+
+.price-box{
+    font-family: var(--ff-secondary);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.current-price{
+    font-weight: var(--fw-700);
+    font-size: 2rem;
+    color: var(--green-500);
+}
+
+.original-price{
+    font-weight: var(--fw-500);
+    color: var(--grey);
+    text-decoration: line-through;
+}
+
+button{
+  background-color: var(--green-500);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: var(--fw-700);
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  border: none;
+
+}
+
+button:hover{
+  background-color: var(--green-700);
+}
+
+@media (min-width: 600px) {
+
+  body{
+    min-height: 100vh;
+  }
+  main{
+    flex-direction: row;
+    max-width: 600px;
+  }
+
+  picture, .product-card {
+    width: 50%;
+  }
+
+  .product-image{
+    border-radius: 0.5rem 0 0 0.5rem ;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .product-card{
+    padding: 2rem;
+    justify-content: space-between;
+    
+ }
+
+ .picture{
+  display: flex;
+  justify-content: center;
+ }
+
+}
